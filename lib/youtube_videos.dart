@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:untitled/videos_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import 'video_item.dart';
+
 class YoutubeVideos extends StatelessWidget {
   const YoutubeVideos({super.key});
 
@@ -17,23 +19,15 @@ class YoutubeVideos extends StatelessWidget {
             IconButton(onPressed: () {}, icon: Icon(Icons.notifications_sharp))
           ],
         ),
-        body: ListView.builder(
-          itemCount: videos_list.length,
-            itemBuilder: (context, index) {
-
-          return Column(
-            children: [
-              YoutubePlayer(controller: YoutubePlayerController(
-                  initialVideoId: videos_list[index]['id'],
-              flags: YoutubePlayerFlags(
-                autoPlay: false,
-                mute: false
-              ))),
-              Text(videos_list[index]['title'])
-              
-            ],
-          );
-        })
+body: ListView.builder(
+      itemCount: videos_list.length,
+      itemBuilder: (context, index) {
+        return VideoItem(
+          videoId: videos_list[index]['id'],
+          title: videos_list[index]['title'],
+        );
+      },
+    )
 
 
     );
