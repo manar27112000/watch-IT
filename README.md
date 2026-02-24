@@ -32,3 +32,8 @@ youtube_player_flutter
 
 ![App Screenshot](lib/Screenshot%20(390).png)
 
+## 🎬 Watch the Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/yEvAV_G-PCg/0.jpg)](https://youtu.be/yEvAV_G-PCg?si=feDdCKzzV-_OpLdt)
+
+🎥 Click the image above to watch the video!
